@@ -3,11 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Spotify Data Visualizer</title>
 </head>
-<body>
-    <div class="container">
-        <h1>Spotify Data Visualizer</h1>
-    </div>
+<body id="container">
+
+    <!--Concepts included:
+        HTML tags
+            Text
+            Lists
+            Images
+            Links
+            Footer
+            Div/Header/Section containers
+        CSS selectors
+            Class
+            HTML tag
+        Box Model
+        Flex boxes
+        
+        Concepts not included:
+        Nav bars
+        ID selectors (need to change some more to be IDs)
+        -->
+
+    <header>
+        <div>
+            <h1 class="title">Spotify Data Visualizer</h1>
+        </div>
+        <img src="https://loodibee.com/wp-content/uploads/Spotify-Logo.png" alt="The spotify logo">
+    </header>
+
+
+    <section class="info-section">
+        <div class="left-container">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur sint minima assumenda tempore alias modi corporis vero earum odit saepe eos voluptates eaque nesciunt nobis, iusto veniam quibusdam culpa doloremque.</p>
+        </div>
+        <div class="right-container">
+            <h2>Visualizations:</h2>
+            <ul>
+                <li>Top artist</li>
+                <li>Average Song Length</li>
+                <li>Loudest Song in decibles</li>
+            </ul>
+            <!-- <img src="https://icons.veryicon.com/png/o/miscellaneous/resume-breakpoint-simple-line-mark/music-435.png" alt="The spotify logo without the text"> -->
+        </div>
+    </section>
+
+
+    <section class="stats-section">
+        <h2 class="stats-title">Statistics</h2>
+        <div>
+            <form> <!--Dropdown menu-->
+
+            </form>
+        </div>
+        <!--When a card becomes active after being selected in the dropdown, it 
+        will lose class 'inactive' and gain class 'active' via javascript-->
+        <div class="stat-card active"> <!--Top Artist-->
+            <h4 class="stat-intro-text">The Top Artist Is</h4>
+            <h3 class="stat-result-text">Beyonce</h3>
+        </div>
+        <div class="stat-card inactive"> <!--Average Song Time-->
+            <h4 class="stat-intro-text">The Average Song Time Is</h4>
+            <h3 class="">...</h3>
+        </div>
+        <div class="stat-card inactive"> <!--Loudest Song by Loudness-->
+            <h4 class="stat-intro-text">The Loudest Song Was</h4>
+            <h3>...</h3>
+        </div>
+    </section>
+
+    <footer>
+        <ul class="social-links">
+            <li>
+                <a href="">LinkedIn</a>
+            </li>
+            <li>
+                <a href="">GitHub</a>
+            </li>
+            <li>
+                <a href="">Instagram</a>
+            </li>
+        </ul>
+    </footer>
+
 </body>
 </html>

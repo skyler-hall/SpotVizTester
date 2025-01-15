@@ -1,7 +1,114 @@
-.container {
+#container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
-  overflow: hidden;
+  padding: 0;
+  /* overflow: hidden; */
   flex: center;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  margin-top: 20px;
+}
+
+img {
+  width: 200px;
+}
+
+.title {
+  font-size: 72px;
+}
+
+.subheading {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*-----------------------------------------*/
+
+/* Do this initially, then when the code breaks at the statistics section, 
+ask audience why and clarify difference between css selector types?? */
+/* section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.left-container {
+  width: 40%;
+  margin: 20px;
+}
+
+/* ----------------------------------- */
+
+
+.stats-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: lightgray;
+  width: 60%;
+  
+  margin: 10px;
+  
+  border: 2px solid gray;
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.active {
+  display: block;
+}
+
+.inactive {
+  display: none;
+}
+
+.stat-intro-text {
+  font-size: 28px;
+}
+
+.stat-result-text {
+  font-size: 40px;
+}
+
+/*-----------------------------------------*/
+
+footer {
+  background-color: lightgray;
+  padding: 18px;
+}
+
+.social-links {
+  margin: 0;
+
+  list-style-type: none;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  font-size: 18px;
 }

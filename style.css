@@ -1,44 +1,114 @@
-.container {
-  max-width: 600px;
+#container {
   width: 100%;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 0;
+  /* overflow: hidden; */
+  flex: center;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  margin-top: 20px;
+}
+
+img {
+  width: 200px;
+}
+
+.title {
+  font-size: 72px;
+}
+
+.subheading {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*-----------------------------------------*/
+
+/* Do this initially, then when the code breaks at the statistics section, 
+ask audience why and clarify difference between css selector types?? */
+/* section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.left-container {
+  width: 40%;
+  margin: 20px;
+}
+
+/* ----------------------------------- */
+
+
+.stats-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  margin-bottom: 30px;
 }
 
+.stat-card {
+  background-color: lightgray;
+  width: 60%;
+  
+  margin: 10px;
+  
+  border: 2px solid gray;
+  border-radius: 20px;
 
-.header {
-    background-color: #1db954;
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    border-radius: 8px;
-    width: 100%;
-    margin-bottom: 20px;
+  text-align: center;
 }
 
-.dropdown {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+.active {
+  display: block;
 }
 
-.dropdown label {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #333;
+.inactive {
+  display: none;
 }
 
-.dropdown select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 300px;
+.stat-intro-text {
+  font-size: 28px;
+}
+
+.stat-result-text {
+  font-size: 40px;
+}
+
+/*-----------------------------------------*/
+
+footer {
+  background-color: lightgray;
+  padding: 18px;
+}
+
+.social-links {
+  margin: 0;
+
+  list-style-type: none;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  font-size: 18px;
 }

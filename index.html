@@ -3,22 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAhMRoAAAAAABkgGQAUExkAYdkeABQUGQBh2h
+    4ARpUcAFzNHgBf1B4AExAZAFnFHQAzZRsAYNceAAAAAAAAAAAAERERERERERERER3d3dEREREd3d3d3dEREd3d3d3d3RER3d3d3d3dER3dWd3FXd3RHd3bIE3Y3dEd3X3d01Xd0R3dVVVa3d3RHd3d3d1lX
+    dEd1VVVVVXd0RHd3d3d3d0REd3d3d3d3RERHd3d3d3RERERHd3d0RERERERERERERH//wAA+B8AAOAHAADAAwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMADAADAAwAA4AcAAPgfAAD//wAA" 
+    rel="icon" type="image/x-icon"> <!--Favicon-->
     <title>Spotify Data Visualizer</title>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Spotify Data Visualizer</h1>
+<body id="container">
+
+    <!--Concepts included:
+        HTML tags
+            Text
+            Lists
+            Images
+            Links
+            Footer
+            Div/Header/Section containers
+        CSS selectors
+            Class
+            HTML tag
+        Box Model
+        Flex boxes
+        
+        Concepts not included:
+        Nav bars
+        ID selectors (need to change some more to be IDs)
+        -->
+
+    <header>
+        <div>
+            <h1 class="title">Spotify Data Visualizer</h1>
         </div>
-        <div class="dropdown">
-            <label for="data-options">Choose a data set:</label>
-            <select id="data-options">
-                <option value="top-tracks">Top Tracks</option>
-                <option value="recently-played">Recently Played</option>
-                <option value="top-artists">Top Artists</option>
-                <option value="playlists">Playlists</option>
-            </select>
+        <img src="https://loodibee.com/wp-content/uploads/Spotify-Logo.png" alt="The spotify logo">
+    </header>
+
+
+    <section class="info-section">
+        <div class="left-container">
+            <h2>About</h2>
+            <p>Welcome to the Spotify Data Visualizer. This projcet takes a data set and organizes it into categories you can select!</p>
         </div>
-    </div>
+        <div class="right-container">
+            <h2>Visualizations:</h2>
+            <ul>
+                <li>Top Artist</li>
+                <li>Average Song Length</li>
+                <li>Loudest Song in Decibles</li>
+            </ul>
+            <!-- <img src="https://icons.veryicon.com/png/o/miscellaneous/resume-breakpoint-simple-line-mark/music-435.png" alt="The spotify logo without the text"> -->
+        </div>
+    </section>
+
+
+    <section class="stats-section">
+        <h2 class="stats-title">Statistics</h2>
+        <div>
+            <form> <!--Dropdown menu-->
+
+            </form>
+        </div>
+        <!--When a card becomes active after being selected in the dropdown, it 
+        will lose class 'inactive' and gain class 'active' via javascript-->
+        <div class="stat-card active"> <!--Top Artist-->
+            <h4 class="stat-intro-text">The Top Artist Is</h4>
+            <h3 class="stat-result-text">Beyonce</h3>
+        </div>
+        <div class="stat-card inactive"> <!--Average Song Time-->
+            <h4 class="stat-intro-text">The Average Song Time Is</h4>
+            <h3 class="">...</h3>
+        </div>
+        <div class="stat-card inactive"> <!--Loudest Song by Loudness-->
+            <h4 class="stat-intro-text">The Loudest Song Was</h4>
+            <h3>...</h3>
+        </div>
+    </section>
+
+    <footer>
+        <ul class="social-links">
+            <li>
+                <a href="">LinkedIn</a>
+            </li>
+            <li>
+                <a href="">GitHub</a>
+            </li>
+            <li>
+                <a href="">Instagram</a>
+            </li>
+        </ul>
+    </footer>
+
 </body>
 </html>

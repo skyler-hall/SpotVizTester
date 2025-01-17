@@ -1,3 +1,8 @@
+body {
+  background-color: #030101;
+  color: white;
+}
+
 #container {
   width: 100%;
   margin: 0 auto;
@@ -22,6 +27,8 @@ img {
 
 .title {
   font-size: 72px;
+  color: #1ED760;
+  /* margin-bottom: 0px; */
 }
 
 .subheading {
@@ -46,12 +53,12 @@ ask audience why and clarify difference between css selector types?? */
   justify-content: center;
 
   margin-bottom: 50px;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .left-container {
-  width: 40%;
-  margin: 20px;
+  width: 60%;
+  margin: 50px;
 }
 
 /* ----------------------------------- */
@@ -62,16 +69,18 @@ ask audience why and clarify difference between css selector types?? */
   flex-direction: column;
   align-items: center;
 
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .stat-card {
-  background-color: lightgray;
+  background-color: #1ED760;
+  box-shadow: 10px 10px white;
+  color: #000;
   width: 60%;
   
   margin: 10px;
   
-  border: 2px solid gray;
+  border: none;
   border-radius: 20px;
 
   text-align: center;
@@ -87,6 +96,7 @@ ask audience why and clarify difference between css selector types?? */
 
 .stat-intro-text {
   font-size: 28px;
+  font-weight: 100;
 }
 
 .stat-result-text {
@@ -96,7 +106,7 @@ ask audience why and clarify difference between css selector types?? */
 /*-----------------------------------------*/
 
 footer {
-  background-color: lightgray;
+  background-color: #121212;
   padding: 18px;
 }
 
@@ -111,4 +121,9 @@ footer {
   justify-content: space-evenly;
 
   font-size: 18px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }

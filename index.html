@@ -25,6 +25,7 @@
             HTML tag
         Box Model
         Flex boxes
+        Favicons
         
         Concepts not included:
         Nav bars
@@ -35,7 +36,7 @@
         <div>
             <h1 class="title">Spotify Data Visualizer</h1>
         </div>
-        <img src="./logo.png" alt="The spotify logo">
+        <img src="./logo.png" alt="Spotify logo">
     </header>
 
 
@@ -56,19 +57,19 @@
     </section>
 
 
-    <section class="stats-section" id='stats-section'>
+    <!-- <section class="stats-section" id='stats-section'>
         <h2 class="stats-title">Statistics</h2>
         <div>
-            <form id="input-form"> <!--Dropdown menu-->
-                <label for="user-input">Enter Option:</label> <!--for is same as input id-->
+            <form id="input-form">
+                <label for="user-input">Enter Option:</label>
                 <input type="text" id="user-input" name="user-input" placeholder="Type here...">
                 <button type="submit">Visualize!</button>
             </form>
         </div>
 
-        <div class="stat-card" id="stat-card"> <!--Top Artist-->
+        <div class="stat-card" id="stat-card">
             <h2>2000s Stats</h2>
-        </div>
+        </div> -->
         <!--
         <div class="stat-card inactive" id="avg-song-time"> 
             <h4 class="stat-intro-text">The Average Song Time Is</h4>
@@ -78,8 +79,30 @@
             <h4 class="stat-intro-text" id="loudest-song-result">The Loudest Song Was</h4>
             <h3>...</h3>
         </div>
-        -->
+        
 
+    </section> -->
+
+    <section class="result-section">
+        <form id="result-form" class="category">
+            <label for="resultinput">Select a Category:</label>
+            <select id="resultinput">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Top Artist">Top Artist</option>
+                <option value="Average Song Length">Average Song Length</option>
+                <option value="Loudest Song in Decibels">Loudest Song in Decibels</option>
+            </select>
+            <button type="submit">Visualize!</button>
+        </form>
+    
+        <div id="result-container">
+            <h2 id="result">Result</h2>
+            <div class="result-card" id="result-card">
+                <div class="result-content">
+                    <h4 class="result-intro-text">Select a category to visualize data.</h4>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>

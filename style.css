@@ -72,6 +72,28 @@ ask audience why and clarify difference between css selector types?? */
   margin-bottom: 60px;
 }
 
+button {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-size: 16px;
+
+  background-color: white;
+  border-radius: 20px;
+}
+
+input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  padding-right: 5px;
+  border:none;
+  border-radius: 20px;
+}
+
 .stat-card {
   background-color: #1ED760;
   box-shadow: 10px 10px white;

@@ -76,9 +76,9 @@ img {
     margin-bottom: 5px; /* Spacing below label */
 }
 
-.spotify-button, select.spotify-button {
-    background-color: #1DB954; /* Spotify green */
-    color: white;
+.spotify-button, select.spotify-button, .result-button {
+    background-color: black; /* Black background */
+    color: #1DB954; /* Spotify green text */
     padding: 12px 24px; /* Increased padding */
     border: none;
     border-radius: 25px; /* More rounded buttons */
@@ -91,7 +91,8 @@ img {
 }
 
 .spotify-button:hover, select.spotify-button:hover {
-    background-color: #1ED760; /* Lighter Spotify green on hover */
+    background-color: #1ED760;
+    color: black; /* Lighter Spotify green on hover */
 }
 
 select.spotify-button {
@@ -100,6 +101,10 @@ select.spotify-button {
     background-repeat: no-repeat;
     background-position-x: calc(100% - 10px);
     background-position-y: center;
+}
+
+.result-button {
+    color: #1ED760;
 }
 
 #result-container {

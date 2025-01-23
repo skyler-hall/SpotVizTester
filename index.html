@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAhMRoAAAAAABkgGQAUExkAYdkeABQUGQBh2h
     4ARpUcAFzNHgBf1B4AExAZAFnFHQAzZRsAYNceAAAAAAAAAAAAERERERERERERER3d3dEREREd3d3d3dEREd3d3d3d3RER3d3d3d3dER3dWd3FXd3RHd3bIE3Y3dEd3X3d01Xd0R3dVVVa3d3RHd3d3d1lX
-    dEd1VVVVVXd0RHd3d3d3d0REd3d3d3d3RERHd3d3d3RERERHd3d0RERERERERERERH//wAA+B8AAOAHAADAAwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMADAADAAwAA4AcAAPgfAAD//wAA" 
+    dEd1VVVVVXd0RHd3d3d3d0REd3d3d3d3RERHd3d3d3RERERHd3d0RERERERERERERH//wAA+B8AAOAHAADAAwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMADAADAAwAA4AcAAPgfAAD//wAA"
     rel="icon" type="image/x-icon"> <!--Favicon-->
     <title>Spotify Data Visualizer</title>
 </head>
@@ -26,7 +26,7 @@
         Box Model
         Flex boxes
         Favicons
-        
+
         Concepts not included:
         Nav bars
         ID selectors (need to change some more to be IDs)
@@ -43,14 +43,15 @@
     <section class="info-section">
         <div class="left-container">
             <h2>About</h2>
-            <p>Welcome to the Spotify Data Visualizer. This projcet takes a data set and organizes it into categories you can select!</p>
+            <p>Welcome to the <b>Spotify Data Visualizer</b>. This project takes a large data set of music information and 
+                organizes it into categories you can select!</p>
         </div>
         <div class="right-container">
             <h2>Visualizations:</h2>
             <ul>
-                <li>Top Artist</li>
-                <li>Average Song Length</li>
-                <li>Loudest Song in Decibles</li>
+                <li>Most Common Genre (Bar Graph)</li>
+                <li>Most Average Year Song Release (Pie Chart)</li>
+                <li>Loudest Song in Decibles (Sideways Graph)</li>
             </ul>
             <!-- <img src="https://icons.veryicon.com/png/o/miscellaneous/resume-breakpoint-simple-line-mark/music-435.png" alt="The spotify logo without the text"> -->
         </div>
@@ -62,8 +63,8 @@
         <div>
             <form id="input-form">
                 <label for="user-input">Enter Option:</label>
-                <input type="text" id="user-input" name="user-input" placeholder="Type here...">
-                <button type="submit">Visualize!</button>
+                <input type="text" id="user-input" name="user-input" placeholder="Type here="...">
+			<button type="submit" class="spotify-button">Visualize!</button>
             </form>
         </div>
 
@@ -71,7 +72,7 @@
             <h2>2000s Stats</h2>
         </div> -->
         <!--
-        <div class="stat-card inactive" id="avg-song-time"> 
+        <div class="stat-card inactive" id="avg-song-time">
             <h4 class="stat-intro-text">The Average Song Time Is</h4>
             <h3 class="stat-result-text" id="avg-song-time-result">...</h3>
         </div>
@@ -79,27 +80,16 @@
             <h4 class="stat-intro-text" id="loudest-song-result">The Loudest Song Was</h4>
             <h3>...</h3>
         </div>
-        
+
 
     </section> -->
 
     <section class="result-section">
-        <form id="result-form" class="category">
-            <label for="resultinput">Select a Category:</label>
-            <select id="resultinput">
-                <option value="" disabled selected>Select an option</option>
-                <option value="Top Artist">Top Artist</option>
-                <option value="Average Song Length">Average Song Length</option>
-                <option value="Loudest Song in Decibels">Loudest Song in Decibels</option>
-            </select>
-            <button type="submit">Visualize!</button>
-        </form>
-    
         <div id="result-container">
             <h2 id="result">Result</h2>
             <div class="result-card" id="result-card">
                 <div class="result-content">
-                    <h4 class="result-intro-text">Select a category to visualize data.</h4>
+                    <h4 class="result-intro-text">Select a category and chart type to visualize data.</h4>
                 </div>
             </div>
         </div>
@@ -119,6 +109,7 @@
         </ul>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="script.js"></script>
 
 </body>

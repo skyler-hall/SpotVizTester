@@ -62,19 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createYearChart() {
-        const genreCounts = {};
+            
+        const yearCounts = {};
         songList.forEach(song => {
-            const genres = song.genre.split(',').map(g => g.trim());
-            genres.forEach(genre => {
-                genreCounts[genre] = (genreCounts[genre] || 0) + 1;
-            });
+            const year = song.year;
+            yearCounts[year] = (yearCounts[year] || 0) + 1;
         });
 
-        const labels = Object.keys(genreCounts);
-        const data = Object.values(genreCounts);
+        const labels = Object.keys(yearCounts);
+        const data = Object.values(yearCounts);
 
         const canvas = document.createElement('canvas');
-        canvas.id = 'genreChart';
+        canvas.id = 'yearChart';
         resultCard.innerHTML = ''; // Clear previous content
         resultCard.appendChild(canvas);
 
@@ -83,40 +82,43 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: [
-                  '2009',
-                  '20011',
-                  '2013'
-                ],
+                labels: labels,
                 datasets: [{
-                  label: 'My First Dataset',
-                  data: [300, 50, 100],
-                  backgroundColor: [
-                    'rgb(9, 110, 31)',
-                    'rgb(0, 155, 26)',
-                    'rgb(28, 75, 42)'
-                  ],
-                  hoverOffset: 2
+                    label: 'Number of Songs by Year',
+                    data: data,
+                    backgroundColor: [
+                        'rgb(23, 255, 23)',
+                        'rgb(4, 83, 8)',
+                        'rgb(12, 207, 29)'
+                    ],
+                    hoverOffset: 4
                 }]
             },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                }
+            }
         });
     }
 
     function createLoudestSongChart() {
 
-        const genreCounts = {};
-        songList.forEach(song => {
-            const genres = song.genre.split(',').map(g => g.trim());
-            genres.forEach(genre => {
-                genreCounts[genre] = (genreCounts[genre] || 0) + 1;
-            });
-        });
+        // Sort the songList by loudness in descending order
+        const sortedSongs = [...songList].sort((a, b) => b.loudness - a.loudness);
 
-        const labels = Object.keys(genreCounts);
-        const data = Object.values(genreCounts);
-
+        // Take the top 10 loudest songs
+        const top10Loudest = sortedSongs.slice(0, 10);
+    
+        // Extract song names and loudness values
+        const labels = top10Loudest.map(song => song.song);
+        const data = top10Loudest.map(song => song.loudness);
+    
         const canvas = document.createElement('canvas');
-        canvas.id = 'genreChart';
+        canvas.id = 'loudestSongChart';
         resultCard.innerHTML = ''; // Clear previous content
         resultCard.appendChild(canvas);
 
@@ -128,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 labels: labels,
                 datasets: [{
                   label: 'Loudest Song',
-                  data: [65, 59, 80, 81, 56, 55, 40],
+                  data: data,
                   fill: false,
                   borderColor: 'rgb(5, 255, 5)',
                   tension: 0.1

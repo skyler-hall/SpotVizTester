@@ -71,9 +71,9 @@ img {
 }
 
 .category label {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: white;
-    margin-bottom: 5px; /* Spacing below label */
+    margin-bottom: 2px;
 }
 
 .spotify-button, select.spotify-button, .result-button {
@@ -92,7 +92,7 @@ img {
 
 .spotify-button:hover, select.spotify-button:hover {
     background-color: #1ED760;
-    color: black; /* Lighter Spotify green on hover */
+    color: black; /* Go black on hover */
 }
 
 select.spotify-button {

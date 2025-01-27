@@ -62,15 +62,79 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createYearChart() {
-        const years = songList.map(song => parseInt(song.year));
-        const averageYear = years.reduce((acc, year) => acc + year, 0) / years.length;
-        console.log('Average Year:', averageYear);
+        const genreCounts = {};
+        songList.forEach(song => {
+            const genres = song.genre.split(',').map(g => g.trim());
+            genres.forEach(genre => {
+                genreCounts[genre] = (genreCounts[genre] || 0) + 1;
+            });
+        });
+
+        const labels = Object.keys(genreCounts);
+        const data = Object.values(genreCounts);
+
+        const canvas = document.createElement('canvas');
+        canvas.id = 'genreChart';
+        resultCard.innerHTML = ''; // Clear previous content
+        resultCard.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                  '2009',
+                  '20011',
+                  '2013'
+                ],
+                datasets: [{
+                  label: 'My First Dataset',
+                  data: [300, 50, 100],
+                  backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(0, 155, 26)',
+                    'rgb(255, 205, 86)'
+                  ],
+                  hoverOffset: 2
+                }]
+            },
+        });
     }
 
     function createLoudestSongChart() {
-        const loudness = songList.map(song => parseFloat(song.loudness));
-        const loudestSong = songList[loudness.indexOf(Math.max(...loudness))];
-        console.log('Loudest Song:', loudestSong);
+
+        const genreCounts = {};
+        songList.forEach(song => {
+            const genres = song.genre.split(',').map(g => g.trim());
+            genres.forEach(genre => {
+                genreCounts[genre] = (genreCounts[genre] || 0) + 1;
+            });
+        });
+
+        const labels = Object.keys(genreCounts);
+        const data = Object.values(genreCounts);
+
+        const canvas = document.createElement('canvas');
+        canvas.id = 'genreChart';
+        resultCard.innerHTML = ''; // Clear previous content
+        resultCard.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
+        
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                  label: 'Loudest Song',
+                  data: [65, 59, 80, 81, 56, 55, 40],
+                  fill: false,
+                  borderColor: 'rgb(5, 255, 5)',
+                  tension: 0.1
+                }]
+            },
+        });
     }
 
 

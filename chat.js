@@ -92,9 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
                   label: 'My First Dataset',
                   data: [300, 50, 100],
                   backgroundColor: [
-                    'rgb(255, 99, 132)',
+                    'rgb(9, 110, 31)',
                     'rgb(0, 155, 26)',
-                    'rgb(255, 205, 86)'
+                    'rgb(28, 75, 42)'
                   ],
                   hoverOffset: 2
                 }]

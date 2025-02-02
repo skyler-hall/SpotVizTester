@@ -1,7 +1,10 @@
+* {
+    font-family:     font-family: 'Inter', sans-serif; /* Modern font */
+}
+
 body {
     background-color: #121212; /* Dark grey background */
     color: white;
-    font-family: 'Inter', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
 }

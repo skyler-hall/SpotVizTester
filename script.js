@@ -1,4 +1,3 @@
-// chat.js
 import { songList } from './spotify_top_hits_clean_json.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultCard.innerHTML = ''; // Clear previous content
         resultCard.appendChild(canvas);
 
-        const ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext('2d'); // Get the context of the canvas element
         new Chart(ctx, {
             type: 'bar',
             data: {

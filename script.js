@@ -23,13 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const genreCounts = {};
 
             // Outer loop to iterate over the songList array
-    for (let i = 0; i < songList.length; i++) {
+    for (const song of songList) {
         
-        const genres = songList[i].genre.split(',').map(g => g.trim());
+        const genres = song.genre.split(',').map(g => g.trim());
         
         // Inner loop to iterate over each genre
-        for (let j = 0; j < genres.length; j++) {
-            const genre = genres[j];
+        for (const genre of genres) {
             genreCounts[genre] = (genreCounts[genre] || 0) + 1;
         }
     }
@@ -66,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createYearChart() {
-            console.log("test");
         const yearCounts = {};
         songList.forEach(song => {
             const year = song.year;

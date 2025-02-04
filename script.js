@@ -1,3 +1,4 @@
+// name file script.js
 import { songList } from './spotify_top_hits_clean_json.js';
 
 document.addEventListener('DOMContentLoaded', () => {

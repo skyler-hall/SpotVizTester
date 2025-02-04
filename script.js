@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (buttonText === 'Most Common Genre') {
                 createGenreChart();
-            } else if (buttonText === 'Average Year Song Released') {
+            } else if (buttonText === 'Year Song Released') {
                 createYearChart();
             } else if (buttonText === 'Loudest Song') {
                 createLoudestSongChart();
@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Outer loop to iterate over the songList array
     for (let i = 0; i < songList.length; i++) {
+        
         const genres = songList[i].genre.split(',').map(g => g.trim());
         
         // Inner loop to iterate over each genre
@@ -65,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createYearChart() {
-            
+            console.log("test");
         const yearCounts = {};
         songList.forEach(song => {
             const year = song.year;

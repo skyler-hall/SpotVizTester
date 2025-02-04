@@ -21,12 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createGenreChart() {
         const genreCounts = {};
-        songList.forEach(song => {
-            const genres = song.genre.split(',').map(g => g.trim());
-            genres.forEach(genre => {
-                genreCounts[genre] = (genreCounts[genre] || 0) + 1;
-            });
-        });
+
+            // Outer loop to iterate over the songList array
+    for (let i = 0; i < songList.length; i++) {
+        const genres = songList[i].genre.split(',').map(g => g.trim());
+        
+        // Inner loop to iterate over each genre
+        for (let j = 0; j < genres.length; j++) {
+            const genre = genres[j];
+            genreCounts[genre] = (genreCounts[genre] || 0) + 1;
+        }
+    }
 
         const labels = Object.keys(genreCounts);
         const data = Object.values(genreCounts);
